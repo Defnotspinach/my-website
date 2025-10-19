@@ -2,8 +2,8 @@
   width: 100%;
   min-height: 100vh;
   padding: 4rem 0;
-  background: var(--background);
-  color: var(--text-color);
+  background: #ffffff;
+  color: #1a1a1a;
 }
 
 .projects h2 {
@@ -35,19 +35,15 @@
   height: 100%;
   padding: 2rem;
   border-radius: 12px;
-  background: var(--card-background);
-  border: 1px solid var(--border-color);
-  backdrop-filter: blur(8px);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   transition: all 0.3s ease;
 }
 
-[data-theme='dark'] .project-content {
-  background: #1e293b;
-  border-color: #334155;
-}
+
 
 .project-header {
   display: flex;
@@ -126,15 +122,8 @@
   border-radius: 20px;
   font-size: 0.875rem;
   font-weight: 500;
-  border: 1px solid var(--border-color);
-  background: var(--background);
-  color: var(--text-color) !important;
-  backdrop-filter: blur(4px);
+  background: #f8fafc;
   transition: all 0.3s ease;
 }
 
-[data-theme='dark'] .tech-tag {
-  background: #0f172a;
-  border-color: #334155;
-  color: #f8fafc;
-}
+/* Removed dark mode specific styles */

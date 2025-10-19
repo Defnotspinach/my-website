@@ -1,10 +1,8 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useTheme } from '../context/ThemeContext';
 import '../styles/projects.css';
 
 const Projects = () => {
-  const { darkMode } = useTheme();
   const projects = [
     {
       title: 'E-Commerce Platform',
@@ -106,9 +104,9 @@ const Projects = () => {
                     key={tech} 
                     className="tech-tag"
                     style={{
-                      backgroundColor: darkMode ? '#0f172a' : '#f8fafc',
-                      borderColor: darkMode ? '#334155' : project.color + '40',
-                      color: darkMode ? '#f8fafc' : project.color
+                      backgroundColor: '#f8fafc',
+                      borderColor: project.color + '40',
+                      color: project.color
                     }}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
