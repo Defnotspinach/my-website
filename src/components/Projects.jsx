@@ -72,13 +72,13 @@ const Projects = () => {
             <motion.div 
               className="project-content"
               style={{ 
-                backgroundColor: darkMode ? 'rgba(30, 41, 59, 0.3)' : '#ffffff',
-                borderColor: darkMode ? `rgba(${project.color}, 0.3)` : `rgba(226, 232, 240, 0.8)`,
+                backgroundColor: 'rgba(30, 41, 59, 0.3)',
+                borderColor: 'rgba(51, 65, 85, 0.5)',
               }}
               whileHover={{ 
                 y: -5,
-                backgroundColor: darkMode ? 'rgba(30, 41, 59, 0.4)' : '#ffffff',
-                borderColor: `${project.color}50`
+                backgroundColor: 'rgba(30, 41, 59, 0.4)',
+                borderColor: project.color
               }}
               transition={{ duration: 0.3 }}
             >
