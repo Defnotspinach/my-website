@@ -1,10 +1,8 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useTheme } from '../context/ThemeContext';
 import '../styles/projects.css';
 
 const Projects = () => {
-  const { darkMode } = useTheme();
   const projects = [
     {
       title: 'E-Commerce Platform',
@@ -72,12 +70,10 @@ const Projects = () => {
             <motion.div 
               className="project-content"
               style={{ 
-                backgroundColor: 'rgba(30, 41, 59, 0.3)',
-                borderColor: 'rgba(51, 65, 85, 0.5)',
+                borderColor: `${project.color}40`
               }}
               whileHover={{ 
                 y: -5,
-                backgroundColor: 'rgba(30, 41, 59, 0.4)',
                 borderColor: project.color
               }}
               transition={{ duration: 0.3 }}
