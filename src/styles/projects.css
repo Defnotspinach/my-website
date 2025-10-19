@@ -1,7 +1,11 @@
 /* Base styles */
 .projects {
-  /* Override any inherited background */
-  background: #0f172a !important;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .projects {
+  background-color: #0f172a;
 }
 
 /* Project section styles */

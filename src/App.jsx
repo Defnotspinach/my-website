@@ -11,7 +11,7 @@ import './styles/darkTheme.css'
 export default function App() {
   return (
     <ThemeProvider>
-      <div className="app" data-theme="light">
+      <div className="app">
         <ParticlesBackground />
         <Header />
         <main>
