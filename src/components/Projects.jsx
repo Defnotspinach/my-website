@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTheme } from '../context/ThemeContext';
 import '../styles/projects.css';
 
 const Projects = () => {
+  const { darkMode } = useTheme();
   const projects = [
     {
       title: 'E-Commerce Platform',

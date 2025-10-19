@@ -2,16 +2,23 @@ import { createContext, useContext, useState, useEffect } from 'react';
 
 const ThemeContext = createContext();
 
-export const ThemeProvider = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(() => {
-    // Check local storage for saved theme preference
-    const savedTheme = localStorage.getItem('theme');
-    // Check system preference if no saved theme
-    if (!savedTheme) {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
+// Initialize theme
+const initializeTheme = () => {
+  // Check if theme was previously set
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
     return savedTheme === 'dark';
-  });
+  }
+  
+  // Check system preference
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+  return prefersDark;
+};
+
+export const ThemeProvider = ({ children }) => {
+  const [darkMode, setDarkMode] = useState(initializeTheme);
 
   useEffect(() => {
     // Update localStorage

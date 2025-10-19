@@ -11,7 +11,7 @@ import './styles/components.css'
 export default function App() {
   return (
     <ThemeProvider>
-      <div className="app">
+      <div className="app" data-theme="light">
         <ParticlesBackground />
         <Header />
         <main>
