@@ -14,9 +14,9 @@ export const ThemeProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    // Update localStorage and document class when theme changes
+    // Update localStorage and document data-theme when theme changes
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
-    document.documentElement.classList.toggle('dark', darkMode);
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
 
   const toggleTheme = () => {
