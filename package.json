@@ -17,6 +17,7 @@
     "react-intersection-observer": "^9.5.2",
     "react-tsparticles": "^2.12.2",
     "react-type-animation": "^3.2.0",
+    "simple-icons": "^15.17.0",
     "tsparticles-slim": "^2.12.0"
   },
   "devDependencies": {
