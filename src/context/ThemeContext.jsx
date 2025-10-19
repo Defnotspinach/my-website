@@ -14,13 +14,10 @@ export const ThemeProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    // Update localStorage and theme
+    // Update localStorage
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
-    // Set on both document element and body for maximum compatibility
+    // Set theme on root element only
     document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
-    document.body.setAttribute('data-theme', darkMode ? 'dark' : 'light');
-    // Also set a class for additional styling options
-    document.body.classList.toggle('dark-theme', darkMode);
   }, [darkMode]);
 
   const toggleTheme = () => {

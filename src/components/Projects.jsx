@@ -50,7 +50,7 @@ const Projects = () => {
   });
 
   return (
-    <section id="projects" className="projects" data-theme={darkMode ? 'dark' : 'light'}>
+    <section id="projects" className="projects">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
