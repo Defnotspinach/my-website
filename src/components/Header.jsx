@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
+import '../styles/header.css';
 
 const Header = () => {
   const { darkMode, toggleTheme } = useTheme();

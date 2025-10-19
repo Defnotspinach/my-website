@@ -1,0 +1,77 @@
+.tech-stack {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+.tech-stack h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.logo-loop-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tech-name {
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .logo-wrapper {
+  background: rgba(30, 41, 59, 0.3);
+  border-color: rgba(51, 65, 85, 0.5);
+}
+
+[data-theme="dark"] .tech-name {
+  color: #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .logo-loop-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .logo-wrapper {
+    padding: 1rem;
+  }
+}

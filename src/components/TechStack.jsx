@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useRef } from 'react';
-import './components.css';
+import { useTheme } from '../context/ThemeContext';
+import '../styles/techstack.css';
 
 const TechStack = () => {
   const technologies = [
