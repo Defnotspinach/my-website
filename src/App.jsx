@@ -1,4 +1,3 @@
-import Header from './components/Header'
 import Home from './components/Home'
 import TechStack from './components/TechStack'
 import Projects from './components/Projects'
@@ -10,7 +9,6 @@ export default function App() {
   return (
     <div className="app">
       <ParticlesBackground />
-      <Header />
       <main>
         <Home />
         <TechStack />

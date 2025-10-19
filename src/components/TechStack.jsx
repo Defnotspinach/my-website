@@ -63,7 +63,7 @@ const TechStack = () => {
             <div className="logo-wrapper">
               <i 
                 className={tech.icon}
-                style={{ color: tech.color, fontSize: '2.5rem' }}
+                style={{ color: tech.color, fontSize: '3rem' }}
               />
               <motion.span
                 className="tech-name"
