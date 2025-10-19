@@ -141,15 +141,6 @@ nav a::after {
 }
 
 nav a:hover::after {
-  width: 100%;
-}
-
-/* Home styles */
-#home {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 6rem 0 3rem;
 }
 

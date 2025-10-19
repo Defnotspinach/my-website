@@ -58,15 +58,6 @@
   font-weight: 500;
 }
 
-[data-theme='dark'] .logo-wrapper {
-  background: var(--card-bg-dark);
-  border-color: var(--border-color-dark);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-[data-theme='dark'] .logo-wrapper:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
 
 .tech-name {
   font-size: 0.9rem;
