@@ -106,9 +106,9 @@ const Projects = () => {
                     key={tech} 
                     className="tech-tag"
                     style={{
-                      backgroundColor: darkMode ? 'rgba(15, 23, 42, 0.6)' : '#f8fafc',
-                      borderColor: project.color + '40',
-                      color: project.color
+                      backgroundColor: darkMode ? 'rgba(0, 0, 0, 0.2)' : '#f8fafc',
+                      borderColor: darkMode ? project.color + '60' : project.color + '40',
+                      color: darkMode ? '#fff' : project.color
                     }}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
