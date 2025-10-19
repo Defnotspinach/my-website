@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useEffect, useState } from 'react';
+import { useRef } from 'react';
+import './components.css';
 
 const TechStack = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   const technologies = [
     { name: 'Java', icon: 'fab fa-java', color: '#007396' },
     { name: 'C#', icon: 'fab fa-microsoft', color: '#239120' },
@@ -30,29 +29,9 @@ const TechStack = () => {
   ];
 
   const [ref, inView] = useInView({
-    triggerOnce: false,
-    threshold: 0.5
+    triggerOnce: true,
+    threshold: 0.1
   });
-
-  useEffect(() => {
-    if (inView) {
-      const interval = setInterval(() => {
-        setActiveIndex((prev) => (prev + 1) % technologies.length);
-      }, 2000);
-
-      return () => clearInterval(interval);
-    }
-  }, [inView, technologies.length]);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
 
   return (
     <section id="tech-stack" className="tech-stack" ref={ref}>
@@ -65,62 +44,38 @@ const TechStack = () => {
       </motion.h2>
 
       <div className="logo-loop-container">
-        <div className="logo-ring">
-          {technologies.map((tech, index) => {
-            const rotation = (360 / technologies.length) * index;
-            const isActive = index === activeIndex;
-
-            return (
-              <motion.div
-                key={tech.name}
-                className={`logo-item ${isActive ? 'active' : ''}`}
-                initial={false}
-                animate={{
-                  rotate: rotation,
-                  scale: isActive ? 1.2 : 1,
-                  opacity: isActive ? 1 : 0.5
-                }}
-                style={{
-                  originX: '50%',
-                  originY: '250px'
-                }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeInOut"
-                }}
-              >
-                <div className="logo-wrapper">
-                  <i 
-                    className={tech.icon}
-                    style={{ color: tech.color, fontSize: '2rem' }}
-                  />
-                  <motion.span
-                    className="tech-name"
-                    animate={{
-                      opacity: isActive ? 1 : 0,
-                      scale: isActive ? 1 : 0.8
-                    }}
-                  >
-                    {tech.name}
-                  </motion.span>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
-
-        <div className="active-tech">
+        {technologies.map((tech, index) => (
           <motion.div
-            key={technologies[activeIndex].name}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.3 }}
-            className="active-tech-content"
+            key={tech.name}
+            className="logo-item"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.1,
+            }}
+            whileHover={{
+              scale: 1.05,
+              transition: { duration: 0.2 }
+            }}
           >
-            <h3>{technologies[activeIndex].name}</h3>
+            <div className="logo-wrapper">
+              <i 
+                className={tech.icon}
+                style={{ color: tech.color, fontSize: '2.5rem' }}
+              />
+              <motion.span
+                className="tech-name"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: index * 0.1 + 0.3 }}
+              >
+                {tech.name}
+              </motion.span>
+            </div>
           </motion.div>
-        </div>
+        ))}
       </div>
     </section>
   );

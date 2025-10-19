@@ -28,11 +28,25 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+.app {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
 }
 
 /* Header styles */
@@ -41,10 +55,11 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--nav-bg);
   backdrop-filter: blur(5px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   z-index: 1000;
+  width: 100%;
 }
 
 nav {
@@ -192,12 +207,14 @@ nav a:hover::after {
 
 /* Tech Stack styles */
 .tech-stack {
-  padding: 6rem 2rem;
+  padding: 6rem 1rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to bottom, var(--bg-color), white);
+  background: var(--bg-color);
+  position: relative;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -215,28 +232,34 @@ nav a:hover::after {
 .logo-loop-container {
   position: relative;
   width: 100%;
-  max-width: 800px;
-  height: 600px;
+  max-width: 1200px;
+  height: auto;
   margin: 0 auto;
-}
-
-.logo-ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 2rem;
 }
 
 .logo-item {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: center;
-  width: 60px;
-  height: 60px;
-  margin: -30px;
+  position: relative;
+  aspect-ratio: 1;
+  background: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  border: 1px solid var(--card-border);
+  transition: all 0.3s ease;
+}
+
+.logo-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px var(--shadow-color);
 }
 
 .logo-wrapper {
@@ -247,6 +270,7 @@ nav a:hover::after {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
 }
 
 .logo-wrapper i {
