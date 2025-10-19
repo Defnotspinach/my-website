@@ -24,9 +24,9 @@ const Header = () => {
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               {darkMode ? (
-                <i className="fas fa-sun" title="Switch to Light Mode"></i>
+                <i className="fas fa-moon" title="Switch to Light Mode"></i>
               ) : (
-                <i className="fas fa-moon" title="Switch to Dark Mode"></i>
+                <i className="fas fa-sun" title="Switch to Dark Mode"></i>
               )}
             </motion.button>
           </div>

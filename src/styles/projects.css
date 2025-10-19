@@ -125,9 +125,9 @@
   font-size: 0.875rem;
   font-weight: 500;
   background: var(--card-background);
-  border: 1px solid var(--border-color);
-  color: var(--text-color) !important;
+  border: 1px solid;
   transition: all 0.3s ease;
+  opacity: 0.9;
 }
 
 /* Dark mode specific styles */

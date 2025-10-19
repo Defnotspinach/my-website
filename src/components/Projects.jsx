@@ -107,8 +107,8 @@ const Projects = () => {
                     className="tech-tag"
                     style={{
                       backgroundColor: darkMode ? 'rgba(15, 23, 42, 0.6)' : '#f8fafc',
-                      borderColor: darkMode ? `rgba(${project.color}, 0.3)` : `rgba(226, 232, 240, 0.8)`,
-                      color: darkMode ? '#e2e8f0' : project.color
+                      borderColor: project.color + '40',
+                      color: project.color
                     }}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
