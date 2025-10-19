@@ -69,8 +69,14 @@ const Projects = () => {
           >
             <motion.div 
               className="project-content"
-              style={{ backgroundColor: project.color + '10' }}
-              whileHover={{ scale: 1.02 }}
+              style={{ 
+                backgroundColor: `color-mix(in srgb, ${project.color}20, var(--card-background))`,
+                borderColor: `color-mix(in srgb, ${project.color}30, var(--border-color))`
+              }}
+              whileHover={{ 
+                scale: 1.02,
+                boxShadow: `0 8px 30px ${project.color}15`
+              }}
               transition={{ duration: 0.3 }}
             >
               <div className="project-header">

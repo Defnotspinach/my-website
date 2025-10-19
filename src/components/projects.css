@@ -26,6 +26,7 @@
   min-height: 400px;
   border-radius: 12px;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-content {
@@ -33,10 +34,12 @@
   padding: 2rem;
   border-radius: 12px;
   background: var(--card-background);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(8px);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .project-header {
@@ -103,4 +106,7 @@
   border-radius: 20px;
   font-size: 0.875rem;
   font-weight: 500;
+  border: 1px solid var(--border-color);
+  background: var(--card-background);
+  backdrop-filter: blur(4px);
 }

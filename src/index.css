@@ -5,15 +5,17 @@
 :root {
   --background: #ffffff;
   --text-color: #213547;
-  --card-background: #f8fafc;
+  --card-background: rgba(248, 250, 252, 0.8);
   --primary-color: #3b82f6;
+  --border-color: rgba(226, 232, 240, 0.8);
 }
 
 [data-theme='dark'] {
   --background: #0f172a;
   --text-color: #e2e8f0;
-  --card-background: #1e293b;
+  --card-background: rgba(30, 41, 59, 0.8);
   --primary-color: #60a5fa;
+  --border-color: rgba(51, 65, 85, 0.8);
 }
 
 body {
