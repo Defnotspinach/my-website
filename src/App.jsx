@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import ParticlesBackground from './components/ParticlesBackground'
 import { ThemeProvider } from './context/ThemeContext'
 import './styles/components.css'
+import './styles/darkTheme.css'
 
 export default function App() {
   return (

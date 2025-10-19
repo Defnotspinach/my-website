@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTheme } from '../context/ThemeContext';
 import '../styles/projects.css';
 
 const Projects = () => {
+  const { darkMode } = useTheme();
   const projects = [
     {
       title: 'E-Commerce Platform',
@@ -70,12 +72,13 @@ const Projects = () => {
             <motion.div 
               className="project-content"
               style={{ 
-                backgroundColor: `color-mix(in srgb, ${project.color}10, var(--card-background))`,
-                borderColor: `color-mix(in srgb, ${project.color}20, var(--border-color))`
+                backgroundColor: darkMode ? 'rgba(30, 41, 59, 0.3)' : '#ffffff',
+                borderColor: darkMode ? `rgba(${project.color}, 0.3)` : `rgba(226, 232, 240, 0.8)`,
               }}
               whileHover={{ 
-                scale: 1.02,
-                boxShadow: `0 8px 30px var(--shadow-color)`
+                y: -5,
+                backgroundColor: darkMode ? 'rgba(30, 41, 59, 0.4)' : '#ffffff',
+                borderColor: `${project.color}50`
               }}
               transition={{ duration: 0.3 }}
             >
@@ -104,10 +107,19 @@ const Projects = () => {
                   <motion.span 
                     key={tech} 
                     className="tech-tag"
-                    style={{ backgroundColor: project.color + '20', color: project.color }}
+                    style={{
+                      backgroundColor: darkMode ? 'rgba(15, 23, 42, 0.6)' : '#f8fafc',
+                      borderColor: darkMode ? `rgba(${project.color}, 0.3)` : `rgba(226, 232, 240, 0.8)`,
+                      color: darkMode ? '#e2e8f0' : project.color
+                    }}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: (index * 0.2) + (techIndex * 0.1) }}
+                    whileHover={{
+                      y: -2,
+                      borderColor: project.color,
+                      transition: { duration: 0.2 }
+                    }}
                   >
                     {tech}
                   </motion.span>
