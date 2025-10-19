@@ -6,36 +6,109 @@
   align-items: center;
   justify-content: center;
   padding: 6rem 2rem;
-  background: var(--bg-primary);
   position: relative;
-  overflow: hidden;
+  z-index: 1;
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
-.tech-stack h2 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  color: var(--text-primary);
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 3rem;
+.get-started-btn:hover {
+  background: #00e5e5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
 }
 
 .logo-loop-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 3rem;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  position: relative;
-  z-index: 2;
 }
 
 .logo-item {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.logo-wrapper {
+  padding: 2rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.logo-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.tech-name {
+  font-size: 0.95rem;
+  color: #666666;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .tech-stack {
+    padding: 5rem 2rem;
+  }
+
+  .tech-header {
+    margin-bottom: 4rem;
+  }
+
+  .tech-stack h2 {
+    font-size: 2.75rem;
+    text-align: center;
+  }
+
+  .tech-description {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .logo-loop-container {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-stack {
+    padding: 4rem 1.5rem;
+  }
+
+  .tech-stack h2 {
+    font-size: 2.5rem;
+  }
+
+  .tech-description {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .logo-loop-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .logo-wrapper {
+    padding: 1.5rem;
+  }
 }
 
 .logo-wrapper {

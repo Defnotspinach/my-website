@@ -34,13 +34,6 @@ const Home = () => {
         >
           Crafting web applications with modern technologies and best practices.
         </motion.p>
-        <motion.button 
-          onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Contact Me
-        </motion.button>
       </motion.div>
     </section>
   );
