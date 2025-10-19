@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 import ParticlesBackground from './components/ParticlesBackground'
 import './styles/components.css'
 
-function App() {
+export default function App() {
   return (
     <div className="app">
       <ParticlesBackground />
