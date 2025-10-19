@@ -8,6 +8,7 @@
   --card-background: rgba(248, 250, 252, 0.8);
   --primary-color: #3b82f6;
   --border-color: rgba(226, 232, 240, 0.8);
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme='dark'] {
@@ -16,6 +17,7 @@
   --card-background: rgba(30, 41, 59, 0.8);
   --primary-color: #60a5fa;
   --border-color: rgba(51, 65, 85, 0.8);
+  --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 body {
