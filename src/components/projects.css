@@ -45,8 +45,8 @@
 }
 
 [data-theme='dark'] .project-content {
-  background: rgba(30, 41, 59, 0.8);
-  border-color: rgba(51, 65, 85, 0.8);
+  background: #1e293b;
+  border-color: #334155;
 }
 
 .project-header {
@@ -86,8 +86,8 @@
 }
 
 [data-theme='dark'] .icon-link {
-  background: rgba(15, 23, 42, 0.6);
-  border-color: rgba(51, 65, 85, 0.8);
+  background: #0f172a;
+  border-color: #334155;
 }
 
 .project-image-wrapper {
@@ -134,6 +134,7 @@
 }
 
 [data-theme='dark'] .tech-tag {
-  background: rgba(15, 23, 42, 0.6);
-  border-color: rgba(51, 65, 85, 0.8);
+  background: #0f172a;
+  border-color: #334155;
+  color: #f8fafc;
 }
