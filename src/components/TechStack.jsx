@@ -35,6 +35,15 @@ const TechStack = () => {
 
   return (
     <section id="tech-stack" className="tech-stack" ref={ref}>
+      <motion.h2
+        className="tech-title"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        Languages & Tools
+      </motion.h2>
       <div className="logo-loop-container">
         {technologies.map((tech, index) => (
           <motion.div
