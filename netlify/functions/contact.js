@@ -8,7 +8,6 @@ exports.handler = async (event) => {
 
   try {
     const { name, email, message } = JSON.parse(event.body || '{}');
-
     console.log('Contact form submission:', { name, email, message });
 
     return {
