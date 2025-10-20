@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import '../styles/projects.css';
+import ParticlesBackground from './ParticlesBackground';
 
 const Projects = () => {
   const projects = [
@@ -48,6 +49,8 @@ const Projects = () => {
   });
 
   return (
+    <div>
+       <ParticlesBackground />
     <section id="projects" className="projects">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -126,6 +129,7 @@ const Projects = () => {
         ))}
       </div>
     </section>
+    </div>
   );
 };
 

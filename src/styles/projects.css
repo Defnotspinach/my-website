@@ -1,6 +1,5 @@
-/* Base styles */
+
 .projects {
-  background-color: #ffffff;
   transition: background-color 0.3s ease;
 }
 
@@ -8,7 +7,6 @@
   background-color: #0f172a;
 }
 
-/* Project section styles */
 .projects {
   width: 100%;
   min-height: 100vh;

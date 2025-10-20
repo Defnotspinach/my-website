@@ -8,7 +8,6 @@
   padding: 6rem 2rem;
   position: relative;
   z-index: 1;
-  background: transparent;
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
 }
@@ -157,14 +156,6 @@
   color: var(--text-primary);
 }
 
-[data-theme="dark"] .logo-wrapper {
-  background: rgba(30, 41, 59, 0.3);
-  border-color: rgba(51, 65, 85, 0.5);
-}
-
-[data-theme="dark"] .tech-name {
-  color: #e2e8f0;
-}
 
 @media (max-width: 768px) {
   .logo-loop-container {
