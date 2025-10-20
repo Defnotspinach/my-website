@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-// ...existing code...
+import ParticlesBackground from './ParticlesBackground';
 import '../styles/techstack.css';
 
 const TechStack = () => {
@@ -34,7 +34,9 @@ const TechStack = () => {
   });
 
   return (
+    
     <section id="tech-stack" className="tech-stack" ref={ref}>
+      
       <motion.h2
         className="tech-title"
         initial={{ opacity: 0, y: -20 }}

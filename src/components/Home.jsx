@@ -1,19 +1,26 @@
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
+import TechStack from './TechStack';
+import Projects from './Projects';
+import ParticlesBackground from './ParticlesBackground';
+import '../styles/home.css';
 
 const Home = () => {
   return (
-    <section id="home">
-      <motion.div 
-        className="content"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
+    <div className="main-container">
+      <ParticlesBackground />
+      <div className="sections-container">
+        <section id="home" className="hero-section">
+        <motion.div 
+          className="content"
+          initial={{ opacity: 0, y: 20 }}   
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
         <h1>Marc Aedrian</h1>
         <div className="type-wrapper">
           <TypeAnimation
-            sequence={[
+            sequence={[ 
               'Full-Stack Developer',
               2000,
               'Mobile App Developer',
@@ -27,7 +34,7 @@ const Home = () => {
             className="typed-text"
           />
         </div>
-        <motion.p
+          <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
@@ -36,6 +43,10 @@ const Home = () => {
         </motion.p>
       </motion.div>
     </section>
+    <TechStack />
+    <Projects />
+      </div>
+    </div>
   );
 };
 

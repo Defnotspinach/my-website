@@ -1,4 +1,3 @@
-/* Global styles */
 :root {
   --primary-color: #2563eb;
   --accent-color: #3b82f6;
@@ -7,7 +6,6 @@
   --card-bg: white;
   --card-border: rgba(226, 232, 240, 0.8);
   --shadow-color: rgba(0, 0, 0, 0.1);
-}
   --card-border: rgba(255, 255, 255, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.3);
 }
