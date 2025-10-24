@@ -17,7 +17,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1>Marc Aedrian</h1>
+            <h1>Marc Aedrian C. Andres</h1>
             <div className="type-wrapper">
               <TypeAnimation
                 sequence={[ 
@@ -39,7 +39,11 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              Crafting web applications with modern technologies and best practices.
+              I’m a Full Stack Developer who builds responsive, 
+              user-friendly web applications from front-end design to back-end functionality, 
+              combining clean code, modern frameworks, 
+              and efficient databases to deliver seamless digital experiences. From 
+              Cauayan City Isabela
             </motion.p>
           </motion.div>
         </section>
